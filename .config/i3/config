@@ -251,3 +251,4 @@ assign [class="Alacritty"] $ws2
 assign [class="Brave-browser"] $ws3
 
 exec ~/.config/polybar/launch.sh
+exec --no-startup-id /usr/bin/xmodmap /home/tanis/.Xmodmap
