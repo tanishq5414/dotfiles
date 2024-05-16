@@ -206,7 +206,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 exec --no-startup-id synclient VertScrollDelta=-111
 
-exec_always feh --bg-fill ~/Pictures/wallpaper2.png
+exec_always feh --bg-fill ~/wallpaper.jpg
 
 assign [class = "Spotify"] $ws10
 
