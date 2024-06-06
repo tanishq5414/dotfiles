@@ -8,8 +8,8 @@ if not vim.loop.fs_stat(lazypath) then
   local repo = "https://github.com/folke/lazy.nvim.git"
   vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
 end
-
 vim.opt.rtp:prepend(lazypath)
+vim.opt.scrolloff = 999
 
 local lazy_config = require "configs.lazy"
 
@@ -53,6 +53,7 @@ require "nvchad.autocmds"
 require("presence").setup({
 
 })
+require("flutter-tools").setup {}
 vim.schedule(function()
   require "mappings"
 end)

@@ -146,6 +146,7 @@ bind -x '"\C-t": "tmux-sessionizer"'
 
 alias n=nvim
 
+xmodmap ~/.Xmodmap
 # Begin script
 #!/usr/bin/env bash
 . "$HOME/.cargo/env"

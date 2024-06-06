@@ -227,10 +227,11 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
 bindsym $mod+x exec --no-startup-id ~/.config/rofi/powermenu/type-1/powermenu.sh
 
-exec_always compton -f
+
+exec_always picom &
 
 # open chrome on workspace 1 and 3 on startup
-exec --no-startup-id i3-msg 'workspace $ws1; exec google-chrome --profile-directory="Default";'
+exec --no-startup-id i3-msg 'workspace $ws1; exec microsoft-edge --profile-directory="Default";'
 exec --no-startup-id i3-msg 'workspace $ws3; exec brave-browser;'
 # open terminal on workspace 2 on startup
 exec --no-startup-id i3-msg 'workspace $ws2; exec alacritty;'
@@ -243,7 +244,7 @@ exec --no-startup-id i3-msg 'workspace $ws5; exec code;'
 
 
 # set default workspace for new windows assign
-assign [class="Google-chrome"] $ws1
+assign [class="Microsoft-edge"] $ws1
 assign [class="Code"] $ws5
 assign [class="google-chat-electron"] $ws4
 assign [class="Spotify"] $ws10
