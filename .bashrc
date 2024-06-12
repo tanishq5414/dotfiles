@@ -140,13 +140,13 @@ export PS1="\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 eval "$(zoxide init bash)"
 #NOTE: You must add the following lines to your bashrc or zshrc
 alias tmux-sessionizer='~/.config/scripts/tmux-sessionizer.sh'
-
+alias cd=z
+alias c=clear
 # this binds control + f to open this script when in a tmux server
 bind -x '"\C-t": "tmux-sessionizer"'
 
 alias n=nvim
 
-xmodmap ~/.Xmodmap
 # Begin script
 #!/usr/bin/env bash
 . "$HOME/.cargo/env"

@@ -242,6 +242,8 @@ exec --no-startup-id i3-msg 'workspace $ws10; exec spotify;'
 # open vscode on workspace 5 on startup
 exec --no-startup-id i3-msg 'workspace $ws5; exec code;'
 
+exec --no-startup-id discord 'workspace $ws9; exec discord'
+
 
 # set default workspace for new windows assign
 assign [class="Microsoft-edge"] $ws1
@@ -250,6 +252,6 @@ assign [class="google-chat-electron"] $ws4
 assign [class="Spotify"] $ws10
 assign [class="Alacritty"] $ws2
 assign [class="Brave-browser"] $ws3
+assign [class="discord"] $ws9
 
 exec ~/.config/polybar/launch.sh
-exec --no-startup-id /usr/bin/xmodmap /home/tanis/.Xmodmap
