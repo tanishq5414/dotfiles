@@ -241,8 +241,10 @@ exec --no-startup-id i3-msg 'workspace $ws4; exec google-chat-electron;'
 exec --no-startup-id i3-msg 'workspace $ws10; exec spotify;'
 # open vscode on workspace 5 on startup
 exec --no-startup-id i3-msg 'workspace $ws5; exec code;'
-
+# open discord on workspace 9 on startup
 exec --no-startup-id discord 'workspace $ws9; exec discord'
+# open postman on workspace 7 on startup
+exec --no-startup-id postman 'workspace $ws7; exec postman'
 
 
 # set default workspace for new windows assign
@@ -253,5 +255,6 @@ assign [class="Spotify"] $ws10
 assign [class="Alacritty"] $ws2
 assign [class="Brave-browser"] $ws3
 assign [class="discord"] $ws9
+exec_always --no-startup-id sudo ~/.config/kmonad/kmonad ~/.config/kmonad/tutorial.kbd
 
 exec ~/.config/polybar/launch.sh
