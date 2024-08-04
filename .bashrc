@@ -147,9 +147,19 @@ bind -x '"\C-t": "tmux-sessionizer"'
 
 alias n=nvim
 
-
+export PATH="$PATH:/usr/bin/java"
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre
+export ANDROID_SDK_ROOT=/home/tanis/Android/Sdk
 # Begin script
 #!/usr/bin/env bash
 . "$HOME/.cargo/env"
 #tmux server runner
 tmux start-server
+
+# pnpm
+export PNPM_HOME="/home/tanis/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

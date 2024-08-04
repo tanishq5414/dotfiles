@@ -45,7 +45,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty --config ~/.config/kitty/kitty.conf 
 
 # kill focused window
 bindsym $mod+q kill
@@ -234,15 +234,13 @@ exec_always picom &
 exec --no-startup-id i3-msg 'workspace $ws1; exec microsoft-edge --profile-directory="Default";'
 exec --no-startup-id i3-msg 'workspace $ws3; exec brave-browser;'
 # open terminal on workspace 2 on startup
-exec --no-startup-id i3-msg 'workspace $ws2; exec alacritty;'
+exec --no-startup-id i3-msg 'workspace $ws2; exec kitty --config ~/.config/kitty/kitty.conf;'
 # open google chat on workspace 4 on startup
 exec --no-startup-id i3-msg 'workspace $ws4; exec google-chat-electron;'
 # open spotify on workspace 10 on startup
 exec --no-startup-id i3-msg 'workspace $ws10; exec spotify;'
-# open vscode on workspace 5 on startup
-exec --no-startup-id i3-msg 'workspace $ws5; exec code;'
 # open discord on workspace 9 on startup
-exec --no-startup-id discord 'workspace $ws9; exec discord'
+exec --no-startup-id vesktop 'workspace $ws9; exec vesktop'
 # open postman on workspace 7 on startup
 exec --no-startup-id postman 'workspace $ws7; exec postman'
 
@@ -252,9 +250,12 @@ assign [class="Microsoft-edge"] $ws1
 assign [class="Code"] $ws5
 assign [class="google-chat-electron"] $ws4
 assign [class="Spotify"] $ws10
-assign [class="Alacritty"] $ws2
+assign [class="kitty"] $ws2
 assign [class="Brave-browser"] $ws3
-assign [class="discord"] $ws9
+assign [class="vesktop"] $ws9
+assign [class="Postman"] $ws7
 exec_always --no-startup-id sudo ~/.config/kmonad/kmonad ~/.config/kmonad/tutorial.kbd
 
 exec ~/.config/polybar/launch.sh
+exec --no-startup-id i3-battery-popup -n -D -L 20 -l 10
+
