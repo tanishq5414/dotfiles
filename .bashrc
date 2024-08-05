@@ -163,3 +163,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+#adb path`
+export PATH="${PATH}:/home/tanis/Android/Sdk/platform-tools"`
+```
