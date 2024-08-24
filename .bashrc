@@ -165,4 +165,7 @@ esac
 export PATH="${PATH}:/home/tanis/Android/Sdk/platform-tools"`
 export PATH="$PATH:$HOME/local/bin"
 export PATH="$PATH:$HOME/.local/kitty.app"
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux -u
+fi
 ```
