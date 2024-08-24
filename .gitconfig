@@ -1,0 +1,21 @@
+[user]
+	email = tanishqagarwal5414@gmail.com
+	name = Tanishq Agarwal
+
+[includeIf "gitdir:$HOME/dev/personal/"]
+  email = tanishqagarwal5414@gmail.com
+  name = Tanishq Agarwal
+	signingkey =  4BC67DE35FB1A167 
+
+[includeIf "gitdir:$HOME/dev/mittarv/"]
+  email = tanishq.agarwal@mittarv.com
+  name = Tanishq Agarwal
+  signingkey = 8059CCA5B8172EF4
+[commit]
+	gpgsign = true
+[alias]
+	barefetch = !git fetch origin \"+refs/heads/*:refs/remotes/origin/*\"
+	undo = reset --soft HEAD~1
+	tree = log --graph --oneline --all
+	unstage = reset HEAD --
+	diffstaged = diff --cached
