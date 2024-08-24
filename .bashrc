@@ -131,7 +131,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Git branch in prompt.
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -152,10 +151,9 @@ export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre
 export ANDROID_SDK_ROOT=/home/tanis/Android/Sdk
 # Begin script
 #!/usr/bin/env bash
-. "$HOME/.cargo/env"
 #tmux server runner
 tmux start-server
-
+export PATH="$PATH:/opt/nvim-linux64/bin"
 # pnpm
 export PNPM_HOME="/home/tanis/.local/share/pnpm"
 case ":$PATH:" in
@@ -165,4 +163,6 @@ esac
 # pnpm end
 #adb path`
 export PATH="${PATH}:/home/tanis/Android/Sdk/platform-tools"`
+export PATH="$PATH:$HOME/local/bin"
+export PATH="$PATH:$HOME/.local/kitty.app"
 ```

@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find /mnt/disk1/Programming/Mittarv /mnt/disk1/Programming/Personal /mnt/disk1 /home/tanis /mnt/disk1/Programming -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find $HOME/dev/mittarv $HOME/dev/personal $HOME $HOME/hdd -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
