@@ -120,7 +120,6 @@ fi
 export PS1="\W \$"
 
 PATH=~/.console-ninja/.bin:$PATH
-export PATH="$PATH:/home/tanis/Dev/flutter/bin"
 export PATH="$PATH:/usr/local/lib/nodejs/node-v18.12.0-linux-x64/bin"
 
 if [ -d $HOME/bin ]; then
@@ -165,6 +164,10 @@ esac
 export PATH="${PATH}:/home/tanis/Android/Sdk/platform-tools"`
 export PATH="$PATH:$HOME/local/bin"
 export PATH="$PATH:$HOME/.local/kitty.app"
+export FLUTTER_HOME="$HOME/flutter"
+export DART_HOME=$FLUTTER_HOME/bin
+export PATH="$PATH:$DART_HOME"
+export PATH="$PATH:~/flutter/bin"
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux -u
 fi
