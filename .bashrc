@@ -120,7 +120,6 @@ fi
 export PS1="\W \$"
 
 PATH=~/.console-ninja/.bin:$PATH
-export PATH="$PATH:/usr/local/lib/nodejs/node-v18.12.0-linux-x64/bin"
 
 if [ -d $HOME/bin ]; then
     PATH=$PATH:$HOME/bin
@@ -140,14 +139,9 @@ eval "$(zoxide init bash)"
 alias tmux-sessionizer='~/.config/scripts/tmux-sessionizer.sh'
 alias cd=z
 alias c=clear
-# this binds control + f to open this script when in a tmux server
-bind -x '"\C-t": "tmux-sessionizer"'
 
 alias n=nvim
 
-export PATH="$PATH:/usr/bin/java"
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre
-export ANDROID_SDK_ROOT=/home/tanis/Android/Sdk
 # Begin script
 #!/usr/bin/env bash
 #tmux server runner
@@ -161,14 +155,22 @@ case ":$PATH:" in
 esac
 # pnpm end
 #adb path`
-export PATH="${PATH}:/home/tanis/Android/Sdk/platform-tools"`
 export PATH="$PATH:$HOME/local/bin"
 export PATH="$PATH:$HOME/.local/kitty.app"
 export FLUTTER_HOME="$HOME/flutter"
 export DART_HOME=$FLUTTER_HOME/bin
 export PATH="$PATH:$DART_HOME"
 export PATH="$PATH:~/flutter/bin"
+
+# Lua
+export PATH=$PATH:$HOME/.config/lsp/lua-language-server/bin
+
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bi
+
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux -u
 fi
-```
+set -o ignoreeof
