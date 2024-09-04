@@ -171,7 +171,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bi
 
 alias scrcpy='scrcpy -m 1080'
-exec dunst &
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux -u
 fi
