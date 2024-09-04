@@ -4,7 +4,8 @@ return {
     lazy = false,
     opts = {
       ensure_installed = {
-        "gopls"
+        "gopls",
+        "prismals"
       },
       auto_install = true,
     },
@@ -26,6 +27,9 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
       local lspconfig = require("lspconfig")
+      lspconfig.prismals.setup({
+        capabilities = capabilities
+      })
       lspconfig.tsserver.setup({
         capabilities = capabilities
       })

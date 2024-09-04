@@ -20,6 +20,8 @@ return {
       )                                                     --create branch
       vim.keymap.set("n", "<leader>ff", tscope.find_files, {}) --find files in the opened directory
       vim.keymap.set("n", "<leader>fg", tscope.live_grep, {}) --universal search
+      vim.keymap.set("n", "<leader>fb", tscope.buffers, {})    --list buffers
+      vim.keymap.set("n", "<leader>fh", tscope.help_tags, {})  --search help tags
       require("telescope").setup({
         pickers = {
           find_files = {
@@ -42,6 +44,18 @@ return {
         },
       })
       require("telescope").load_extension("ui-select")
+    end,
+  },
+  {
+    'dawsers/telescope-file-history.nvim',
+    config = function()
+      require('file_history').setup {
+        -- This is the location where it will create your file history repository
+        backup_dir = "~/.file-history-git",
+        -- command line to execute git
+        git_cmd = "git"
+      }
+      require('telescope').load_extension('file_history')
     end,
   },
 }
