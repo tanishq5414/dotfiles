@@ -175,3 +175,6 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux -u
 fi
 set -o ignoreeof
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/tanishq/.pulumi/bin

@@ -20,3 +20,5 @@
 	unstage = reset HEAD --
 	diffstaged = diff --cached
 	arwt = "!f() { git worktree add \"$2\" \"$1\" && (cd \"$2\" && git fetch origin && git reset --hard origin/\"$1\"); }; f"
+[init]
+	defaultBranch = main
