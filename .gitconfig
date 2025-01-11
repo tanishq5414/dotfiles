@@ -12,7 +12,7 @@
   name = Tanishq Agarwal
   signingkey = 8059CCA5B8172EF4
 [commit]
-	gpgsign = true
+	gpgsign = false 
 [alias]
 	barefetch = !git fetch origin \"+refs/heads/*:refs/remotes/origin/*\"
 	undo = reset --soft HEAD~1

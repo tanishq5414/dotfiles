@@ -7,7 +7,6 @@ return {
       local tscope = require("telescope.builtin")
       require("telescope").load_extension("git_worktree")
       require("telescope").load_extension("undo")
-      require("telescope").load_extension("fzf")
       vim.keymap.set(
         "n",
         "<leader>wl",

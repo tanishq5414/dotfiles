@@ -5,7 +5,7 @@ exec > >(tee -a /tmp/tmux-sessionizer-debug.log) 2>&1  # Log all output and erro
 if [[ $# -eq 1 ]]; then
     selected="$1"
 else
-    selected=$(find "$HOME/dev/mittarv" "$HOME/dev/programming" "$HOME" "$HOME/hdd" -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find "$HOME/dev/mittarv" "$HOME/dev/personal" "$HOME" "$HOME/hdd" -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
