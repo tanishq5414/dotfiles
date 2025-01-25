@@ -113,7 +113,7 @@ set $ws1 "1 p-chrome "
 set $ws2 "2 cmd "
 set $ws3 "3 w-chrome "
 set $ws4 "4 G-chat "
-set $ws5 "5 Vscode "
+set $ws5 "5 Cursor "
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -236,13 +236,15 @@ exec --no-startup-id i3-msg 'workspace $ws3; exec brave-browser;'
 # open terminal on workspace 2 on startup
 exec --no-startup-id i3-msg 'workspace $ws2; exec kitty --config ~/.config/kitty/kitty.conf;'
 # open google chat on workspace 4 on startup
-exec --no-startup-id i3-msg 'workspace $ws4; exec google-chat-electron;'
+exec --no-startup-id i3-msg 'workspace $ws4; exec google-chat-linux;'
 # open spotify on workspace 10 on startup
 exec --no-startup-id i3-msg 'workspace $ws10; exec spotify;'
 # open discord on workspace 9 on startup
 exec --no-startup-id vesktop 'workspace $ws9; exec vesktop'
 # open postman on workspace 7 on startup
 exec --no-startup-id postman 'workspace $ws7; exec postman'
+# open datagrip on workspace 6 on startup
+exec --no-startup-id datagrip 'workspace $ws6; exec jetbrains-datagrip'
 
 
 # set default workspace for new windows assign
@@ -253,6 +255,7 @@ assign [class="Spotify"] $ws10
 assign [class="kitty"] $ws2
 assign [class="Brave-browser"] $ws3
 assign [class="vesktop"] $ws9
+assign [class="jetbrains-datagrip"] $ws6
 assign [class="Postman"] $ws7
 exec_always --no-startup-id sudo ~/.config/kmonad/kmonad ~/.config/kmonad/tutorial.kbd
 exec dunst &

@@ -1,3 +1,5 @@
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
-vim.keymap.set("n", "<C-BS>", "dw", {silent = true, desc = 'delete from cursor to ending word'})
-vim.keymap.set("i", "<C-BS>", "dw", {silent = true, desc = 'delete from cursor to ending word'})
+vim.api.nvim_set_keymap('i', '<C-BS>', '<C-w>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-h>', '<C-w>', { noremap = true, silent = true })
+vim.keymap.set("n", "Y", '"ayy', { noremap = true, silent = true })
+

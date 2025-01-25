@@ -157,7 +157,7 @@ esac
 #adb path`
 export PATH="$PATH:$HOME/local/bin"
 export PATH="$PATH:$HOME/.local/kitty.app"
-export FLUTTER_HOME="$HOME/flutter"
+export FLUTTER_HOME="$HOME/dev/flutter/flutter"
 export DART_HOME=$FLUTTER_HOME/bin
 export PATH="$PATH:$DART_HOME"
 export PATH="$PATH:~/flutter/bin"
@@ -185,3 +185,5 @@ set -o ignoreeof
 
 # add Pulumi to the PATH
 export PATH=$PATH:/home/tanishq/.pulumi/bin
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

@@ -5,7 +5,11 @@
 [includeIf "gitdir:$HOME/dev/personal/"]
   email = tanishqagarwal5414@gmail.com
   name = Tanishq Agarwal
-	signingkey =  4BC67DE35FB1A167 
+
+[includeIf "gitdir:$HOME/dotfiles/"]
+  email = tanishqagarwal5414@gmail.com
+  name = Tanishq Agarwal
+    signingkey =  4BC67DE35FB1A167 
 
 [includeIf "gitdir:$HOME/dev/mittarv/"]
   email = tanishq.agarwal@mittarv.com
