@@ -145,7 +145,6 @@ alias n=nvim
 # Begin script
 #!/usr/bin/env bash
 #tmux server runner
-tmux start-server
 export PATH="$PATH:/opt/nvim-linux64/bin"
 # pnpm
 export PNPM_HOME="/home/tanis/.local/share/pnpm"
@@ -181,7 +180,6 @@ alias scrcpy='scrcpy -m 1080'
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux -u
 fi
-set -o ignoreeof
 
 # add Pulumi to the PATH
 export PATH=$PATH:/home/tanishq/.pulumi/bin

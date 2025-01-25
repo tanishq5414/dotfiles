@@ -228,7 +228,7 @@ bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
 bindsym $mod+x exec --no-startup-id ~/.config/rofi/powermenu/type-1/powermenu.sh
 
 
-exec_always picom &
+exec_always compton --vsync opengl-swc --backend glx
 
 # open chrome on workspace 1 and 3 on startup
 exec --no-startup-id i3-msg 'workspace $ws1; exec microsoft-edge --profile-directory="Default";'
@@ -250,7 +250,7 @@ exec --no-startup-id datagrip 'workspace $ws6; exec jetbrains-datagrip'
 # set default workspace for new windows assign
 assign [class="Microsoft-edge"] $ws1
 assign [class="Code"] $ws5
-assign [class="google-chat-electron"] $ws4
+assign [class="google-chat-linux"] $ws4
 assign [class="Spotify"] $ws10
 assign [class="kitty"] $ws2
 assign [class="Brave-browser"] $ws3
