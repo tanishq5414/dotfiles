@@ -185,5 +185,3 @@ set -o ignoreeof
 
 # add Pulumi to the PATH
 export PATH=$PATH:/home/tanishq/.pulumi/bin
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
