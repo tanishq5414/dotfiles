@@ -14,14 +14,14 @@ return {
             ---Block-comment toggle keymap
             block = "gbc",
         },
-        -- ---LHS of operator-pending mappings in NORMAL and VISUAL mode
-        -- opleader = {
+        ---LHS of operator-pending mappings in NORMAL and VISUAL mode
+        opleader = {
         --     ---Line-comment keymap
-        --     line = "<C-_>",
+            line = "<C-_>",
         --     ---Block-comment keymap
-        --     block = "gb",
-        -- },
-        ---LHS of extra mappings
+            block = "gb",
+        },
+        -- -LHS of extra mappings
         extra = {
             ---Add comment on the line above
             above = "gcO",
