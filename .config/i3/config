@@ -237,14 +237,8 @@ exec --no-startup-id i3-msg 'workspace $ws3; exec brave-browser;'
 exec --no-startup-id i3-msg 'workspace $ws2; exec kitty --config ~/.config/kitty/kitty.conf;'
 # open google chat on workspace 4 on startup
 exec --no-startup-id i3-msg 'workspace $ws4; exec google-chat-linux;'
-# open spotify on workspace 10 on startup
-exec --no-startup-id i3-msg 'workspace $ws10; exec spotify;'
-# open discord on workspace 9 on startup
-exec --no-startup-id vesktop 'workspace $ws9; exec vesktop'
-# open postman on workspace 7 on startup
-exec --no-startup-id postman 'workspace $ws7; exec postman'
 # open datagrip on workspace 6 on startup
-exec --no-startup-id datagrip 'workspace $ws6; exec jetbrains-datagrip'
+# exec --no-startup-id datagrip 'workspace $ws6; exec jetbrains-datagrip'
 
 
 # set default workspace for new windows assign

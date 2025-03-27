@@ -59,6 +59,7 @@ return {
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
       vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, {})
       vim.keymap.set('v', '<Leader>fm', vim.lsp.buf.format, {})
+      vim.keymap.set('n', '<Leader>gl', vim.diagnostic.open_float, {})
     end,
   },
 }
