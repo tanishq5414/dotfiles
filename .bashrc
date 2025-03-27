@@ -177,9 +177,18 @@ setxkbmap -layout us -option ctrl:swapcaps
 
 
 alias scrcpy='scrcpy -m 1080'
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+if command -v tmux &> /dev/null && 
+   [ -n "$PS1" ] && 
+   [[ ! "$TERM" =~ screen ]] && 
+   [[ ! "$TERM" =~ tmux ]] && 
+   [ -z "$TMUX" ] && 
+   [ "$TERM_PROGRAM" != "vscode" ]; then
+  echo "Starting tmux..."
   exec tmux -u
+else
+  echo "Skipping tmux"
 fi
 
 # add Pulumi to the PATH
 export PATH=$PATH:/home/tanishq/.pulumi/bin
+. "$HOME/.cargo/env"
